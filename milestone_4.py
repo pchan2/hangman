@@ -8,11 +8,11 @@ class Hangman:
         self.word_list = word_list
         self.num_lives = num_lives
         self.word = random.choice(word_list)
-        self.word_guesses = self.initialise_word_guesses() # Characters guessed. ['_', '_', '_']
+        self.word_guessed = self.initialise_word_guessed() # Characters guessed. ['_', '_', '_']
         self.num_letters = len(set([*self.word])) # The number of UNIQUE letters in the word that have not been guessed yet.
         self.list_of_guesses = [] # The list of characters guessed.
 
-    def initialise_word_guesses(self) -> list:
+    def initialise_word_guessed(self) -> list:
         char_list = []
         for _ in self.word:
             char_list.append('_')
@@ -22,6 +22,11 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
+            for i in self.word:
+                if self.word[i] == guess:
+                    self.word_guessed[i] = guess
+            self.num_letters -= 1
+
     
     def ask_for_input(self):
         while True:
