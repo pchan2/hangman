@@ -25,11 +25,11 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 ## Milestones
 
-[x] Set up the environment.
-[x] Create the variables for the game.
-[x] Check if the guessed character is in the word.
-[x] Create the Game Class.
-[ ] Putting it all together.
+- [x] Set up the environment.
+- [x] Create the variables for the game.
+- [x] Check if the guessed character is in the word.
+- [x] Create the Game Class.
+- [ ] Putting it all together.
 
 ## Installation
 
