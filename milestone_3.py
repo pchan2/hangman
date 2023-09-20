@@ -2,6 +2,7 @@ from curses.ascii import isalpha
 
 import random
 
+
 def check_guess(guess):
     guess = guess.lower()
     if guess in word:
