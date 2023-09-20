@@ -6,9 +6,10 @@ print(word_list)
 word = random.choice(word_list)
 print(word)
 
-guess = input('enter a single letter: ')
+guess = input('Enter a single letter: ')
+print(f'You\'ve entered: {guess}')
 guess = guess.lower()
-print(guess)
+
 if len(guess) == 1 and 97 <= ord(guess) <= 122:
     print("Good guess!")
 else:
