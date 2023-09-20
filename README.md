@@ -2,7 +2,12 @@
 
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
 
-This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
+This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it.
+
+## Learnings
+
+1. `ord()` gives an [ASCII Decimal Code](https://www.asciitable.com/) of a character.
+2. `random.choice()` generates a random item from a list.
 
 ## Installation
 
