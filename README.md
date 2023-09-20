@@ -9,12 +9,14 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 1. `ord()` gives an [ASCII Decimal Code](https://www.asciitable.com/) of a character.
 2. `random.choice()` generates a random item from a list.
 3. `isalpha()` checks if a character is alphabetical.
+4. Ensure there are no bugs in the code before committing.
 
 ## Milestones
 
 [x] Set up the environment.
 [x] Create the variables for the game.
 [x] Check if the guessed character is in the word.
+[x] Create the Game Class.
 
 ## Installation
 
