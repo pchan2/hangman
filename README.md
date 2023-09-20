@@ -10,6 +10,18 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 2. `random.choice()` generates a random item from a list.
 3. `isalpha()` checks if a character is alphabetical.
 4. Ensure there are no bugs in the code before committing.
+5. Refactor:
+    - Eliminate Code Duplication: Identify repeated code blocks and refactor them into separate methods or functions. This promotes code reusability and reduces the likelihood of bugs
+    - Single Responsibility Principle (SRP): Ensure that each method has a single responsibility, focusing on a specific task. If a method handles multiple concerns, split it into smaller, focused methods
+    - Access Modifiers: Make methods private or protected if they are intended for internal use within the class and not externally accessible
+    - Avoid Nested Loops: Minimize nested loops whenever possible to improve code efficiency and reduce complexity
+    - Minimal Use of self: When writing methods in a class, only use self for variables that store information unique to each object created from the class. This helps keep the code organized and ensures that each object keeps its own special data separate from others
+    - Consistent Docstrings: Provide clear and consistent docstrings for all methods, explaining their purpose, parameters, and return values. This aids code understanding for other developers
+6. Docstring commands:
+    - `help(Hangman) `# prints the class docstring, initialiser and public methods
+    - `print(Hangman.__dir__)`
+    - `print(Hangman.__dict__)`
+    - `print(Hangman.__doc__)` # prints the class docstring
 
 ## Milestones
 
@@ -17,6 +29,7 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 [x] Create the variables for the game.
 [x] Check if the guessed character is in the word.
 [x] Create the Game Class.
+[ ] Putting it all together.
 
 ## Installation
 
