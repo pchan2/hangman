@@ -1,5 +1,7 @@
 # Hangman
 
+## Table of contents
+
 - [Hangman](#hangman)
   * [Learnings](#learnings)
   * [Milestones](#milestones)
