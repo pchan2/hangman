@@ -10,7 +10,7 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 2. `random.choice()` generates a random item from a list.
 3. `isalpha()` checks if a character is alphabetical.
 4. Ensure there are no bugs in the code before committing.
-5. Refactor:
+5. Refactor ([reference](https://portal.theaicore.com/project/ccec2912-b0c5-4798-bcfd-21add0e658af)):
     - Eliminate Code Duplication: Identify repeated code blocks and refactor them into separate methods or functions. This promotes code reusability and reduces the likelihood of bugs
     - Single Responsibility Principle (SRP): Ensure that each method has a single responsibility, focusing on a specific task. If a method handles multiple concerns, split it into smaller, focused methods
     - Access Modifiers: Make methods private or protected if they are intended for internal use within the class and not externally accessible
@@ -29,13 +29,39 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 - [x] Create the variables for the game.
 - [x] Check if the guessed character is in the word.
 - [x] Create the Game Class.
-- [ ] Putting it all together.
+- [x] Putting it all together.
 
 ## Installation
 
+- [Python3](https://www.python.org/downloads/)
+
 ## Usage
 
+1. Run `python3 milestone_5.py`
+2. Enter a single alphabetical guess letter.
+3. If the letter is invalid, you will be prompted to re-enter.
+4. You have five lives in total.
+5. To win, you have to guess the correct letters of a random word.
+6. You will lose one life if your guess is wrong.
+7. If you have used up your lives, you will lose.
+8. To end the game prematurely, press `Ctrl`+`c` or `Ctrl`+`x`
+
 ## File structure of the project
+
+**milestone_5.py:**
+
+1. Imports of modules.
+2. Hangman class definition.
+    1. Initialiser.
+    2. Public methods:
+        - `ask_for_input`
+    3. Private methods:
+        - `__is_valid_input`
+        - `__check_guess`
+        - `__update_word_guessed`
+3. `play_game` definition.
+4. `word_list` initialisation.
+5. `play_game()` execution.
 
 ## License
 
