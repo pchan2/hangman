@@ -27,7 +27,7 @@ class Hangman:
     
     def ask_for_input(self) -> None:
         '''
-        This function is used to ask for input from the user.
+        This function is used to ask for an input from the user.
 
         A valid input is a single alphabetical letter that has not been
         guessed before. The validated letter is then checked against the
@@ -66,7 +66,13 @@ class Hangman:
                 self.word_guessed[i] = guess
 
 
-def play_game(word_list) -> None:
+def play_game(word_list: list) -> None:
+    '''
+    This function is used to run the hangman game.
+
+    Args:
+        word_list (list): the list of words.
+    '''
     game = Hangman(word_list)
     while True:
         if game._num_lives == 0:
