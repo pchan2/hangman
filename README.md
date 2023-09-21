@@ -1,6 +1,14 @@
 # Hangman
 
-[[TOC]]
+- [Hangman](#hangman)
+  * [Learnings](#learnings)
+  * [Milestones](#milestones)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [File structure of the project](#file-structure-of-the-project)
+  * [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
 
