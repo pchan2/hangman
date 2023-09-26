@@ -1,4 +1,3 @@
-from curses.ascii import isalpha
 import random
 
 
@@ -8,7 +7,7 @@ class Hangman:
 
     Attributes:
         _word_list (list): the list of words.
-        _num_lives (int): the number of lives with a default value of five.
+        num_lives (int): the number of lives with a default value of five.
         _word (str): the word is randomly selected from _word_list.
         word_guessed (list): the word guessed is a list of letters guessed with the initial values of '_'.
         num_letters (int): the number of unique letters in the word that have not been guessed yet.
@@ -19,7 +18,7 @@ class Hangman:
         See help(Hangman) for accurate signature.
         '''
         self._word_list = word_list
-        self._num_lives = num_lives
+        self.num_lives = num_lives
         self._word = random.choice(word_list)
         self.word_guessed = ['_'] * len(self._word)
         self.num_letters = len(set([*self._word]))
@@ -40,7 +39,7 @@ class Hangman:
 
     def __is_valid_input(self, guess: str) -> bool:
         list_of_guesses = self.list_of_guesses
-        if len(guess) != 1 or len(guess) == 1 and not isalpha(guess):
+        if len(guess) != 1 or len(guess) == 1 and not guess.isalpha:
             print("Invalid letter. Please, enter a single " +
                   "alphabetical character.")
         elif guess in list_of_guesses:
@@ -56,14 +55,15 @@ class Hangman:
             self.__update_word_guessed(word, guess)
             self.num_letters -= 1
         else:
-            self._num_lives -= 1
+            self.num_lives -= 1
             print(f"Sorry, {guess} is not in the word.")
-            print(f"You have {self._num_lives} lives left.")
+            print(f"You have {self.num_lives} lives left.")
     
     def __update_word_guessed(self, word: str, guess: str) -> None:
         for i in range(len(word)):
             if word[i] == guess:
                 self.word_guessed[i] = guess
+        print(self.word_guessed)
 
 
 def play_game(word_list: list) -> None:
@@ -75,7 +75,7 @@ def play_game(word_list: list) -> None:
     '''
     game = Hangman(word_list)
     while True:
-        if game._num_lives == 0:
+        if game.num_lives == 0:
             print("You lost!")
             break
         elif game.num_letters == 0:
@@ -85,5 +85,6 @@ def play_game(word_list: list) -> None:
             game.ask_for_input()
 
 
-word_list = ['strawberry', 'pear', 'banana', 'kiwi', 'watermelon']
-play_game(word_list)
+if __name__ == "__main__":
+    word_list = ['strawberry', 'pear', 'banana', 'kiwi', 'watermelon']
+    play_game(word_list)
