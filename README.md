@@ -51,14 +51,16 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 ## Usage
 
+1. Run `git clone https://github.com/pchan2/hangman.git`
+1. Run `cd hangman` if the present directory is not already hangman.
 1. Run `python3 milestone_5.py`
-2. Enter a single alphabetical guess letter.
-3. If the letter is invalid, you will be prompted to re-enter.
-4. You have five lives in total.
-5. To win, you have to guess the correct letters of a random word.
-6. You will lose one life if your guess is wrong.
-7. If you have used up your lives, you will lose.
-8. To end the game prematurely, press `Ctrl`+`c` or `Ctrl`+`x`
+1. Enter a single alphabetical guess letter.
+1. If the letter is invalid, you will be prompted to re-enter.
+1. You have five lives in total.
+1. To win, you have to guess the correct letters of a random word.
+1. You will lose one life if your guess is wrong.
+1. If you have used up your lives, you will lose.
+1. To end the game prematurely, press `Ctrl`+`c` or `Ctrl`+`x`
 
 ## File structure of the project
 
