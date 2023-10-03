@@ -38,6 +38,7 @@ class Hangman:
             self.list_of_guesses.append(guess)
 
     def __is_valid_input(self, guess: str) -> bool:
+        '''Validate the input and return an boolean.'''
         list_of_guesses = self.list_of_guesses
         if len(guess) != 1 or len(guess) == 1 and not guess.isalpha:
             print("Invalid letter. Please, enter a single " +
@@ -48,6 +49,7 @@ class Hangman:
             return True
 
     def __check_guess(self, guess: str) -> None:
+        '''Check if the guess is in the random word.'''
         guess = guess.lower()
         word = self._word
         if guess in word:
@@ -60,6 +62,7 @@ class Hangman:
             print(f"You have {self.num_lives} lives left.")
     
     def __update_word_guessed(self, word: str, guess: str) -> None:
+        '''Update the word_guessed list if the guess is correct.'''
         for i in range(len(word)):
             if word[i] == guess:
                 self.word_guessed[i] = guess
